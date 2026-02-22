@@ -52,6 +52,14 @@ const Home: React.FC = () => {
                 Reserve a Table
             </NavLink>
           </div>
+          <div className="mt-8 flex justify-center">
+            <a href="tel:+211910249910" className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors group">
+                <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-colors text-primary">
+                    <span className="material-icons text-sm">call</span>
+                </span>
+                <span className="text-lg font-medium tracking-wide">+211 910 249 910</span>
+            </a>
+          </div>
         </div>
       </section>
 

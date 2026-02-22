@@ -41,26 +41,6 @@ const WEEKLY_OFFERS: DailyOffer[] = [
     day: "THURSDAY",
     morning: { title: "Buy one get one free wrap or Sandwich", time: "From 11:00am–6:00pm" },
     evening: { title: "KARAOKE NIGHT", subtitle: "Sing on the stage for your table & get one cocktail Pitcher free", time: "From 4:30pm–9:00pm" }
-  },
-  {
-    day: "FRIDAY",
-    morning: { title: "20% off on our Breakfast Menu", time: "From 7:00am–11:00am" },
-    evening: {
-        items: [
-            "Buy One Martel or Hennesy for your table Get 1 plate of kebab",
-            "Buy 2-tequila & get free pizza"
-        ]
-    }
-  },
-  {
-    day: "SATURDAY",
-    morning: { title: "20% off on our Breakfast Menu", time: "From 7:00am–11:00am" },
-    evening: {
-        items: [
-            "Buy One Martel or Hennesy for your table Get 1 plate of kebab",
-            "Buy 2-tequila & get free pizza"
-        ]
-    }
   }
 ];
 

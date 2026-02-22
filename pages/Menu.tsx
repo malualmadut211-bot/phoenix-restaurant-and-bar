@@ -355,7 +355,7 @@ const Menu: React.FC = () => {
             <div className="relative z-10 text-center max-w-4xl px-4 mt-16">
                  <span className="inline-block py-1 px-3 rounded-full bg-primary/20 border border-primary/40 text-primary text-sm font-bold uppercase tracking-wider mb-4 backdrop-blur-sm">Open 24 Hours</span>
                  <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
-                    Taste the <span className="text-primary">Phoenix</span> Flavor
+                    Taste the <span class="text-primary">Phoenix</span> Flavor
                 </h1>
                 <p className="text-xl text-gray-200 font-medium max-w-2xl mx-auto drop-shadow-md">
                     Delicious food, refreshing drinks, and unforgettable flavors. Experience the finest dining in Juba.

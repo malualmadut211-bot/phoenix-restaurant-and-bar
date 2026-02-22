@@ -8,7 +8,7 @@ const Services: React.FC = () => {
       <div className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlAoLYGlNAMlY1IBEjtcOfhPG5JlOCSznt6Grsj0wm7qpOxuWsXMtbn61r23mvDo4uBptySIlk1sLh8tNpsPc14rnAFPdWexf1WjAtmXQ-mS3w3ltoFKnSLF_h_-RVg2hqOok992IgHcj8ZHnPfeOiCgRtdu20-ppe5ed8fs8uphA5PwQVsPUatAGKMRgBbp8It5Z0FJHlVc5HgWqjxFKd1XbOjeSPZt1vxmOGt1ETT0oMXNPP1e8dWPtBWqeZfiYMkVLNVr-Ywtc" alt="Background" className="w-full h-full object-cover opacity-20"/>
-           <div className="absolute inset-0 bg-gradient-to-b from-background-base/90 via-background-base/80 to-background-base"></div>
+           <div class="absolute inset-0 bg-gradient-to-b from-background-base/90 via-background-base/80 to-background-base"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
             <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary border border-primary/20 text-xs font-semibold uppercase tracking-wider mb-4 shadow-glow">Experience Juba's Finest</span>

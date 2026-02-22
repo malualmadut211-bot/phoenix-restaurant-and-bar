@@ -86,7 +86,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   {item.label}
                 </NavLink>
               ))}
-              <div className="flex flex-col items-end">
+              <div className="flex flex-col items-center">
                 <a href="tel:+211910249910" className="bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded-full font-bold text-xs shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5 border border-primary/50 flex items-center gap-2">
                     <span className="material-icons text-sm">call</span>
                     Book a Table
@@ -171,8 +171,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </div>
 
                 <div>
-                     <h3 class="font-bold text-sm uppercase tracking-widest mb-6 text-white border-b border-white/10 pb-2 inline-block">Quick Links</h3>
-                     <ul class="space-y-3 text-sm text-gray-400">
+                     <h3 className="font-bold text-sm uppercase tracking-widest mb-6 text-white border-b border-white/10 pb-2 inline-block">Quick Links</h3>
+                     <ul className="space-y-3 text-sm text-gray-400">
                          <li><NavLink to="/menu" className="hover:text-primary transition-colors hover:translate-x-1 inline-block transform duration-200">Our Menu</NavLink></li>
                          <li><NavLink to="/contact" className="hover:text-primary transition-colors hover:translate-x-1 inline-block transform duration-200">Book a Table</NavLink></li>
                          <li><NavLink to="/music" className="hover:text-primary transition-colors hover:translate-x-1 inline-block transform duration-200">Events Gallery</NavLink></li>
@@ -181,40 +181,40 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </div>
 
                 <div>
-                     <h3 class="font-bold text-sm uppercase tracking-widest mb-6 text-white border-b border-white/10 pb-2 inline-block">Contact Us</h3>
-                     <ul class="space-y-4 text-sm text-gray-400">
-                         <li class="flex items-start gap-3">
-                             <span class="material-icons text-primary text-sm mt-0.5">location_on</span>
+                     <h3 className="font-bold text-sm uppercase tracking-widest mb-6 text-white border-b border-white/10 pb-2 inline-block">Contact Us</h3>
+                     <ul className="space-y-4 text-sm text-gray-400">
+                         <li className="flex items-start gap-3">
+                             <span className="material-icons text-primary text-sm mt-0.5">location_on</span>
                              <span>Behind Phenicia, Ministries Road,<br/>Juba, South Sudan</span>
                          </li>
-                         <li class="flex items-center gap-3">
-                             <span class="material-icons text-primary text-sm">phone</span>
-                             <a href="tel:+211910249910" class="hover:text-white transition-colors">+211 910 249 910</a>
+                         <li className="flex items-center gap-3">
+                             <span className="material-icons text-primary text-sm">phone</span>
+                             <a href="tel:+211910249910" className="hover:text-white transition-colors">+211 910 249 910</a>
                          </li>
                      </ul>
                 </div>
                  <div>
-                    <h3 class="font-bold text-sm uppercase tracking-widest mb-6 text-white border-b border-white/10 pb-2 inline-block">Opening Hours</h3>
-                    <ul class="space-y-3 text-gray-400 text-sm">
-                        <li class="flex justify-between border-b border-white/5 pb-2">
+                    <h3 className="font-bold text-sm uppercase tracking-widest mb-6 text-white border-b border-white/10 pb-2 inline-block">Opening Hours</h3>
+                    <ul className="space-y-3 text-gray-400 text-sm">
+                        <li className="flex justify-between border-b border-white/5 pb-2">
                             <span>Mon - Sun</span>
-                            <span class="text-white font-medium">24 Hours</span>
+                            <span className="text-white font-medium">24 Hours</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
+            <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
                 <p>© 2026 Phoenix Bar & Restaurant. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <div className="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
       </footer>
 
       {/* Floating Buttons */}
-      <div class="fixed bottom-6 left-6 z-50">
+      <div className="fixed bottom-6 left-6 z-50">
           <a 
             href="https://wa.me/211910249910" 
             target="_blank" 
@@ -222,7 +222,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             className="flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:shadow-[#25D366]/40 hover:scale-110 transition-all duration-300"
             title="Chat on WhatsApp"
           >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-8 h-8"/>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-8 h-8"/>
           </a>
       </div>
 
@@ -232,7 +232,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             className="flex items-center justify-center w-12 h-12 bg-primary hover:bg-primary-hover text-white rounded-full shadow-lg hover:shadow-primary/40 transition-all duration-300 transform hover:scale-110"
             title="Scroll to top"
           >
-              <span class="material-icons">arrow_upward</span>
+              <span className="material-icons">arrow_upward</span>
           </button>
       </div>
 

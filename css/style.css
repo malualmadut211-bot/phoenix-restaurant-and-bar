@@ -1,0 +1,14 @@
+body {
+    background-color: #000000;
+    color: #f3f4f6;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.text-glow {
+    text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+}

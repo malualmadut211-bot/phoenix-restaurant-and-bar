@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | Phoenix Bar & Restaurant</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#DC2626",
+                        "primary-hover": "#B91C1C",
+                        "primary-glow": "#EF4444",
+                        "background-base": "#000000",
+                        "background-surface": "#121212",
+                        "background-elevated": "#1E1E1E",
+                        "card-dark": "#0A0A0A",
+                        "text-main": "#f3f4f6",
+                        "text-muted": "#a1a1aa",
+                        "gold-accent": "#eab308",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    boxShadow: {
+                        "glow": "0 0 15px rgba(220, 38, 38, 0.15)",
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Custom styles for accordion transition */
+        .menu-accordion-content {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-background-base text-text-main font-display" data-page="menu">
+    
+    <!-- Sticky Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <div class="min-h-screen bg-background-base">
+        <!-- Hero -->
+        <div class="relative h-[400px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZljVQDGGHvTBRWrt1OEJTEDJI71aOLl0G4n7u7F4T_OkXX0gJj_36J1cHhQZ2O8bqkdkgZmmW2U62ieHULaNmqqjwLZZXwPIZYnmBL_dSlMTgdKV9Ck0G16Fk7ntosbOCgidGxy8zNtn-kKlF_AEJQ4lE5wrjr4_T8p8tKmTbEUq2Mc2McZgVd28mn6F9WMMh2M2TyFRHlvFZiP9gHHi7ay6PfpswSvdbK421HgyoyamxhWspYWkzoBOcMv0lfcUqmwdVLCiXSNA" class="w-full h-full object-cover opacity-60" alt="Menu header"/>
+                 <div class="absolute inset-0 bg-gradient-to-t from-background-base via-background-base/50 to-transparent"></div>
+            </div>
+            <div class="relative z-10 text-center max-w-4xl px-4 mt-16">
+                 <span class="inline-block py-1 px-3 rounded-full bg-primary/20 border border-primary/40 text-primary text-sm font-bold uppercase tracking-wider mb-4 backdrop-blur-sm">Open 24 Hours</span>
+                 <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
+                    Taste the <span class="text-primary">Phoenix</span> Flavor
+                </h1>
+                <p class="text-xl text-gray-200 font-medium max-w-2xl mx-auto drop-shadow-md">
+                    Delicious food, refreshing drinks, and unforgettable flavors. Experience the finest dining in Juba.
+                </p>
+            </div>
+        </div>
+
+        <!-- Menu Items -->
+        <main class="w-full px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+             
+             <!-- Signature Section -->
+             <div class="space-y-16">
+                 <!-- Signature Drink -->
+                 <section id="signature-drink" class="scroll-mt-40">
+                     <div class="flex items-center gap-4 mb-8">
+                         <h2 class="text-3xl font-bold text-white drop-shadow-sm">Signature Drink</h2>
+                         <div class="h-1 flex-grow bg-gradient-to-r from-primary/50 to-transparent rounded-full"></div>
+                     </div>
+                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="group relative bg-card-dark rounded-xl overflow-hidden shadow-lg shadow-black/40 hover:shadow-primary/10 transition-all duration-300 border border-white/5 hover:border-primary/50">
+                            <div class="absolute top-3 left-3 z-10"><span class="text-white text-xs font-bold px-2 py-1 rounded shadow-md shadow-black/50 bg-primary">MUST TRY</span></div>
+                            <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=1000&auto=format&fit=crop" alt="Special Mocktail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-90 group-hover:brightness-100"/></div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors mb-2">Special Mocktail</h3>
+                                <p class="text-gray-400 text-sm mb-4 line-clamp-2">A refreshing tropical blend with mint, lime, and sparkling soda. A burst of flavor in every sip.</p>
+                            </div>
+                        </div>
+                     </div>
+                 </section>
+
+                 <!-- Signature Food -->
+                 <section id="signature-food" class="scroll-mt-40">
+                     <div class="flex items-center gap-4 mb-8">
+                         <h2 class="text-3xl font-bold text-white drop-shadow-sm">Signature Food</h2>
+                         <div class="h-1 flex-grow bg-gradient-to-r from-primary/50 to-transparent rounded-full"></div>
+                     </div>
+                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="group relative bg-card-dark rounded-xl overflow-hidden shadow-lg shadow-black/40 hover:shadow-primary/10 transition-all duration-300 border border-white/5 hover:border-primary/50">
+                            <div class="absolute top-3 left-3 z-10"><span class="text-white text-xs font-bold px-2 py-1 rounded shadow-md shadow-black/50 bg-amber-600">CHEF'S SPECIAL</span></div>
+                            <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=1000&auto=format&fit=crop" alt="Special Pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-90 group-hover:brightness-100"/></div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors mb-2">Special Pizza</h3>
+                                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Our chef's masterpiece featuring premium toppings, melted mozzarella, and our secret house sauce.</p>
+                            </div>
+                        </div>
+                        <div class="group relative bg-card-dark rounded-xl overflow-hidden shadow-lg shadow-black/40 hover:shadow-primary/10 transition-all duration-300 border border-white/5 hover:border-primary/50">
+                            <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1000&auto=format&fit=crop" alt="Chicken Pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-90 group-hover:brightness-100"/></div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors mb-2">Chicken Pizza</h3>
+                                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Tender grilled chicken chunks, bell peppers, red onions, and sweet corn on a cheesy base.</p>
+                            </div>
+                        </div>
+                     </div>
+                 </section>
+             </div>
+
+             <!-- Full Menu Section -->
+             <section id="full-menu" class="scroll-mt-40 pt-10 border-t border-white/10">
+                 <div class="text-center mb-12">
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Hungry for More?</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Full Menu</h2>
+                 </div>
+
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 items-start">
+                     <!-- Template for Menu Accordion Item -->
+                     <!-- BREAKFAST -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">BREAKFAST</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">French Toast (4pcs): with tea/coffee or glass of juice</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Baked Potato (4pcs): Grilled tomatoes (2pcs), Baked beans. fruit platter with tea or coffee</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Eggs of your choice: Fried Plantain, juice (small glass) or yoghurt, toasted bread</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Full English breakfast:(2 eggs of choice, 2 Sausages, bacon stripes, fruit salad with tea or coffee</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- STARTERS -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">STARTERS</h3>
+                                <p class="text-sm text-gray-400 mt-1 italic">[All Served With Bread Rolls]</p>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Clear or creamy chicken soup</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Clear or creamy Mushroom Soup</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Clear Or Creamy Mixed Vegetable Soup</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Goats Soup</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- SALADS -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">SALADS</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Garden Salad: (Mixture of fresh vegetables)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Greek Salad: (Fresh Vegetable dices, Fetah Cheese, Black olives and a fine dressing (Vinaigrette)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Italian Salad: (Fresh Vegetable dices, ham, Green or black olives, cheddar cheese and a fine dressing)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Tuna Salad: (Tuna chunks with creamy diced Onions with crispy lattuce)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chicken ceaser salad</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- SNACKS -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">SNACKS</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Beef samosas: (4pcs Served with Sweet chilli sauce and lemon wedges)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Plen Chips</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Masala Chips</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Beef Samosas 4 pics</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Vegetable Samosas pics</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Egg Rolls</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Fish Fingers with Chips</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Sausage Beef</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- BURGERS -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">BURGERS</h3>
+                                <p class="text-sm text-gray-400 mt-1 italic">(All served with chips)</p>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Beef Burger</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Cheese Burger</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chicken Cheese Burger</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chicken Burger</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Phoenix special Burger</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- CURRIES -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">CURRIES</h3>
+                                <p class="text-sm text-gray-400 mt-1 italic">(All Served with rice or 2pcs of Chapatti)</p>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chicken Curry</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Beef curry</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Vegetable curry</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Fish curry</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- PASTAS -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">PASTAS</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Spaghetti Bolognese (Beef)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Spaghetti Carbonara (Ham)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Spaghetti Napolitana: (with tomato Sauce)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Penne Pasta: (with Bolognese, carbonara or Napolitna)</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- WRAPS -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">WRAPS</h3>
+                                <p class="text-sm text-gray-400 mt-1 italic">(All served with chips)</p>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Beef Wrap: (Beef stripes, vegetable stripes in taco wrap)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chicken Wrap: (Chicken stripes. Vegetable stripes in taco wrap)</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- CHICKEN -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">CHICKEN</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Grilled Chicken Breast with Chips</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chilli chicken: (Spicy chicken stripes, served with Rice)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Fried Chicken with chips</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chicken kebabs with chips</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chicken wings with chips</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Phoenix chilli Chicken: (Spicy, served with Masala Chips)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chicken Dram Stick</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Crumbed Chicken Fillet</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Kuku Choma</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chicken Pilau</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- PIZZAS -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">PIZZAS</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chicken Pizza: (Chicken dices and cheese)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Vegie Pizza: (Vegetables)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Margarita Pizza: (Tomato)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Tuna Pizza: (Tuna chunks and cheese)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Hawaii Pizza: (Ham, pineapple and cheese)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Salami Pizza: (Salami)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Mix Pizza: (Chicken, Beef. Tuna, Vegetable, Egg with Shadda Cheez)</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- BEEF -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">BEEF</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Mushroom Steak</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Pepper Steak</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Beef stew</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Beef kebabs</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Beef Pilau: (Chicken Cutlet/Fish)</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- GOAT -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">GOAT</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Goat Fry: (Served wet or dry with chips or plantain)</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- SIZZLING -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">SIZZLING</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Sizzling Chicken:(Stripped chicken with vegies on sizzling plate)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Beef Sizzling: (Striped Beef with vagies on Sizzling Plate)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Vegetable sizzling</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- FISH -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">FISH</h3>
+                                <p class="text-sm text-gray-400 mt-1 italic">(All served chips, tata sauce)</p>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Grilled Fish Fillet With Chips</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Fried Fish Fillet with Chips</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Whole Tilapia Fried Fish With Chips: (Whole Tilapia Baked Fish with herb garlic, butter, sauces with)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Veg rice</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Crumbed fish filled Chapatti or chips</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- SANDWICHES -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">SANDWICHES</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chicken Sandwich: (Chicken. Tomatoes, Onions and lettuce)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Club Sandwich: (Chicken, Eggs, tomatoes)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Cheese Sandwich: (Cheese Served with chips)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">B.L.T: (Bacon, lettuce and tomotoes)</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- RICE -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">RICE</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Vegetables fried rice</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chicken fried rice</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Beef fried rice</span></li>
+                            </ul>
+                        </div>
+                     </div>
+
+                     <!-- PORK -->
+                     <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">PORK</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Port Ribs: (Grilled. honey glazed Served with Chips)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Pork chops: (Salty. Served with Chips)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Hawaii Pork</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Fried Pork</span></li>
+                            </ul>
+                        </div>
+                     </div>
+                 </div>
+             </section>
+
+             <!-- Desserts Section -->
+             <section id="desserts" class="scroll-mt-40 pt-10 border-t border-white/10">
+                 <div class="text-center mb-12">
+                     <h2 class="text-3xl md:text-4xl font-bold text-white">DESSERTS</h2>
+                 </div>
+                 <div class="max-w-3xl mx-auto">
+                    <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                        <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                            <div class="flex-1 pr-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">DESSERTS</h3>
+                            </div>
+                            <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                            <ul class="space-y-4 border-t border-white/10 pt-4">
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Fruit Salad</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Fruit platter</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Banana split: (split of banana, 2 scoops of ice cream and a rosette of whipped sweet cream</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Cream Caramel</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Apple pie: (served with vanilla sauce and an ice cream scoop)</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chef Salad: Lettuce, Cucumba, Carrot, Tomatoes, Chicken Fillet, Bacon, Boil Eggs, Green Pepers. Black/Green Olives, Cheedar Cheese</span></li>
+                                <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Avacado Salad: Mangoes Avocado, Tomato, Passiley. Unaigrette Dressing</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                 </div>
+             </section>
+
+             <!-- Drinks Section -->
+             <section id="drinks" class="relative py-20 bg-black text-white scroll-mt-20 border-t border-white/10 rounded-2xl overflow-hidden">
+                  <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#ec4913 1px, transparent 1px); background-size: 30px 30px;"></div>
+                  <div class="relative px-6">
+                      <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Drinks</h2>
+                        <div class="w-24 h-1 bg-primary mx-auto rounded-full shadow-glow"></div>
+                      </div>
+
+                      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8 items-start">
+                         <!-- SOFT DRINKS -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">SOFT DRINKS</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Sodas</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Water</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Sparkling Water</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- HOT BEVERAGES -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">HOT BEVERAGES</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Capucino</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Cafe Latte</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Maciato</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Espresso</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Espresso Maciato</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Drinking Chocolate</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Vanilla Late/Capucino</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Hezent Latte/Capucino</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Black Tea</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Green Tea, Vibiscousty</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- COLD BEVERAGES -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">COLD BEVERAGES</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Iced Moccah</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Iced Capucino</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Iced Late</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chocolate Cream Frapucino</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Vanilla Iced Frapucino</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Vanilla Iced Latte</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Iced Coffee Black</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Irish Coffee</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Americano</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Lemon Ginger Mint Tea</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- FRESH JUICES -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">FRESH JUICES</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Pineapple</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Orange</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Lemon</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Watermelon</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Passion</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Ovacado (With milk)</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Papaya</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Phoenix Special</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- BEER -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">BEER</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Black Ice</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Castle Lite</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Club</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Corona</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Guiness</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Heineken</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Nile</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Savanah</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Tusker Larga</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Tusker Lite</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">White Cap</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- MOCKTAIL -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">MOCKTAIL</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Cindella</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Virgin Pinacolada</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Banana Peanut</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Pineapple Mints</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Cucumber Basil</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Virgin Mojito</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Electric Lemon</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- CLASSIC COCKTAILS (1) -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">CLASSIC COCKTAILS</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Passion Mojito</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Sex On The Beach</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Innocent Sex</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Tequila Sunrise</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Screw Driver</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Long Island</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Blue Frog</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Blue Hawai</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Blue Lagoon</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Tom Collins</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Pink Pussy</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Margarita</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Classic Martino</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Whisky Sour</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Gin Sour</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">London Mule</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Mosco Mule</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Screening Organism</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- CLASSIC COCKTAILS (2) -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">CLASSIC COCKTAILS</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Blow Job</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Jeger Bomb</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Success</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Slippery Nipple</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Pinacolada</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Lemon Drop Martin</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Dawa</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Hand Gurnet</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- WINES -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">WINES</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Balaire Rose</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Lanson Rose</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Jackobs Greek C</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Svetonj Toscana</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Nedburg Souvana</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Nedburg Pinatage</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">St. Mary's Natural Sweet Wine</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Dompo</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Dompo Semi & Dry Wine</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Drostdy - Hof Red</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Four You-Sweet Roze Wine</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">4 Cousins - Red</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">4 Cousins White</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">4TH Street Red, White</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- CHAMPAIGNE -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">CHAMPAIGNE</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Moet Chandon</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- SPARKLING WINE -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">SPARKLING WINE</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Amarane Della Vapolicella</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">J.C LE-Rock</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Martini Sparkling</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- LIQOUR -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">LIQOUR</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Malibu</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Contreau</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Amarula</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Zappa (Sambuca)</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Baileys</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Jagermeister</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Khalua</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Southern Comfort</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- GINS -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">GINS</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Hendricks</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Gilbeys</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Bombay</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Tanguery Gin</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Gordon</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Jim Beam</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">UG Pineapple</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">UG 1/2 Plain</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">UG Coconut</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- VODKA -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">VODKA</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Absolute Vodka</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Ciroc</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- APARATIFFS -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">APARATIFFS</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Martini Bianco</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Martini Rosso</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Campari</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Martini Dry</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- RUM -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">RUM</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Barcadi (Rum)</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Spiced Gold</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Havana Club</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Capt. Morgan Spiced</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- TEQUILA -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">TEQUILA</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Jose Tequila</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Camino</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Olmeca</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- WHISKEY -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">WHISKEY</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Black Label</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Red Label</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Gold Label</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Green Label</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Double Black</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Famous Gouse</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Glenfiditch 12 Years</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Glenfiditch 15 Years</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Glenfiditch 18 Years</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Glenfiditch 21</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chivas 12 Years</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Chivas 18 Years</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Jack Daniels</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">J.D Honey</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Jameson</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Jim Beam</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">White Label Bullt</span></li>
+                                </ul>
+                            </div>
+                         </div>
+
+                         <!-- COGNAC -->
+                         <div class="bg-card-dark/30 rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-primary/30 h-fit">
+                            <button class="menu-accordion-toggle w-full p-6 md:p-8 flex justify-between items-center text-left bg-white/5 hover:bg-white/10 transition-colors focus:outline-none">
+                                <div class="flex-1 pr-4">
+                                    <h3 class="text-xl md:text-2xl font-bold text-primary tracking-wide">COGNAC</h3>
+                                </div>
+                                <span class="material-icons text-primary transition-transform duration-300">expand_more</span>
+                            </button>
+                            <div class="menu-accordion-content px-6 md:px-8 max-h-0 opacity-0 overflow-hidden">
+                                <ul class="space-y-4 border-t border-white/10 pt-4">
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Remy Martini (VSOP)</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Hennesy VSOP</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Hennesy Vs</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Martel VS</span></li>
+                                    <li class="flex justify-between items-baseline group"><span class="text-gray-200 font-medium group-hover:text-white transition-colors text-sm md:text-base">Martel (VSOP)</span></li>
+                                </ul>
+                            </div>
+                         </div>
+                     </div>
+                  </div>
+             </section>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

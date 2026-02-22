@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cakes | Phoenix Bar & Restaurant</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#DC2626",
+                        "primary-hover": "#B91C1C",
+                        "primary-glow": "#EF4444",
+                        "background-base": "#000000",
+                        "background-surface": "#121212",
+                        "background-elevated": "#1E1E1E",
+                        "card-dark": "#0A0A0A",
+                        "text-main": "#f3f4f6",
+                        "text-muted": "#a1a1aa",
+                        "gold-accent": "#eab308",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    boxShadow: {
+                        "glow": "0 0 15px rgba(220, 38, 38, 0.15)",
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-background-base text-text-main font-display" data-page="cake">
+    
+    <div id="header-placeholder"></div>
+
+    <div class="bg-background-base text-gray-100 min-h-screen">
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://raw.githubusercontent.com/malualmadut211-bot/ai-studio-media/ea180822e934718ddcfce5fef2697ed2f747a1f2/ChatGPT%20Image%20Feb%2018%2C%202026%2C%2004_08_24%20PM.png" alt="Delicious Cake" class="w-full h-full object-cover opacity-50"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-background-base via-black/40 to-black/30"></div>
+            </div>
+            <div class="relative z-10 text-center max-w-4xl px-4 animate-fadeIn">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight drop-shadow-2xl">
+                    Delicious Cakes for <br/><span class="text-primary text-glow">Every Celebration</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 font-light tracking-wide max-w-2xl mx-auto drop-shadow-md">
+                    Freshly baked. Beautifully designed. Made to make your moments special.
+                </p>
+                <div class="mt-8">
+                     <a href="#featured" class="inline-block px-8 py-4 bg-primary hover:bg-primary-hover text-white font-bold rounded-full transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/30">
+                        View Cakes
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Cakes Section -->
+        <section id="featured" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                 <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Sweet Indulgence</span>
+                 <h2 class="text-3xl md:text-4xl font-bold text-white">Featured Cakes</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Cake 1 -->
+                <div class="bg-card-dark rounded-xl overflow-hidden border border-white/5 shadow-lg group hover:border-primary/50 transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1000&auto=format&fit=crop" alt="Chocolate Fudge Cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Chocolate Fudge Cake</h3>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Rich chocolate layers with smooth fudge frosting</p>
+                        <a href="https://wa.me/211910249910?text=I'm interested in ordering the Chocolate Fudge Cake" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 border border-primary text-primary hover:bg-primary hover:text-white font-bold rounded transition-colors uppercase text-sm tracking-wider">Order Now</a>
+                    </div>
+                </div>
+                
+                <!-- Cake 2 -->
+                 <div class="bg-card-dark rounded-xl overflow-hidden border border-white/5 shadow-lg group hover:border-primary/50 transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://raw.githubusercontent.com/malualmadut211-bot/ai-studio-media/ea180822e934718ddcfce5fef2697ed2f747a1f2/ChatGPT%20Image%20Feb%2018%2C%202026%2C%2004_03_07%20PM.png" alt="Vanilla Celebration Cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Vanilla Celebration Cake</h3>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Classic vanilla cake perfect for birthdays</p>
+                        <a href="https://wa.me/211910249910?text=I'm interested in ordering the Vanilla Celebration Cake" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 border border-primary text-primary hover:bg-primary hover:text-white font-bold rounded transition-colors uppercase text-sm tracking-wider">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Cake 3 -->
+                 <div class="bg-card-dark rounded-xl overflow-hidden border border-white/5 shadow-lg group hover:border-primary/50 transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1586788680434-30d324b2d46f?q=80&w=1000&auto=format&fit=crop" alt="Red Velvet Cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Red Velvet Cake</h3>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Soft, rich, and topped with cream cheese frosting</p>
+                        <a href="https://wa.me/211910249910?text=I'm interested in ordering the Red Velvet Cake" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 border border-primary text-primary hover:bg-primary hover:text-white font-bold rounded transition-colors uppercase text-sm tracking-wider">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Cake 4 -->
+                 <div class="bg-card-dark rounded-xl overflow-hidden border border-white/5 shadow-lg group hover:border-primary/50 transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=1000&auto=format&fit=crop" alt="Black Forest Cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Black Forest Cake</h3>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Chocolate sponge with cherries and whipped cream</p>
+                        <a href="https://wa.me/211910249910?text=I'm interested in ordering the Black Forest Cake" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 border border-primary text-primary hover:bg-primary hover:text-white font-bold rounded transition-colors uppercase text-sm tracking-wider">Order Now</a>
+                    </div>
+                </div>
+                
+                <!-- Cake 5 -->
+                 <div class="bg-card-dark rounded-xl overflow-hidden border border-white/5 shadow-lg group hover:border-primary/50 transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?q=80&w=1000&auto=format&fit=crop" alt="Fruit Cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Fruit Cake</h3>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Light sponge topped with fresh fruits</p>
+                        <a href="https://wa.me/211910249910?text=I'm interested in ordering the Fruit Cake" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 border border-primary text-primary hover:bg-primary hover:text-white font-bold rounded transition-colors uppercase text-sm tracking-wider">Order Now</a>
+                    </div>
+                </div>
+
+                 <!-- Cake 6 -->
+                 <div class="bg-card-dark rounded-xl overflow-hidden border border-white/5 shadow-lg group hover:border-primary/50 transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=1000&auto=format&fit=crop" alt="Customized Birthday Cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Customized Birthday Cake</h3>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Designed specifically for your celebration</p>
+                        <a href="https://wa.me/211910249910?text=I'm interested in ordering a Customized Birthday Cake" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 border border-primary text-primary hover:bg-primary hover:text-white font-bold rounded transition-colors uppercase text-sm tracking-wider">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Cake Orders Section -->
+        <section class="py-24 bg-background-elevated relative overflow-hidden">
+             <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px]"></div>
+             <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-900/10 rounded-full blur-[100px]"></div>
+             
+             <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                     <div>
+                         <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Made Just For You</span>
+                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Order Your Custom Cake</h2>
+                         <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                             We create custom cakes for all your special occasions. Whether it's a grand wedding or an intimate birthday, our bakers bring your vision to life.
+                         </p>
+                         
+                         <div className="grid grid-cols-2 gap-4 mb-10">
+                             <div class="flex items-center text-gray-400"><span class="material-icons text-primary text-sm mr-2">check_circle</span>Birthdays</div>
+                             <div class="flex items-center text-gray-400"><span class="material-icons text-primary text-sm mr-2">check_circle</span>Weddings</div>
+                             <div class="flex items-center text-gray-400"><span class="material-icons text-primary text-sm mr-2">check_circle</span>Anniversaries</div>
+                             <div class="flex items-center text-gray-400"><span class="material-icons text-primary text-sm mr-2">check_circle</span>Corporate Events</div>
+                             <div class="flex items-center text-gray-400"><span class="material-icons text-primary text-sm mr-2">check_circle</span>Special Occasions</div>
+                             <div class="flex items-center text-gray-400"><span class="material-icons text-primary text-sm mr-2">check_circle</span>Theme Parties</div>
+                         </div>
+
+                         <div class="flex flex-col sm:flex-row gap-4">
+                             <a href="https://wa.me/211910249910" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold rounded-lg shadow-lg transition-all transform hover:-translate-y-1">
+                                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-5 h-5 mr-2 brightness-0 invert"/>
+                                 Order via WhatsApp
+                             </a>
+                             <a href="tel:+211910249910" class="inline-flex items-center justify-center px-8 py-4 border border-white text-white hover:bg-white hover:text-black font-bold rounded-lg transition-all">
+                                 <span class="material-icons mr-2">call</span>
+                                 Call Now
+                             </a>
+                         </div>
+                     </div>
+
+                     <!-- Custom Order Form -->
+                     <div class="bg-card-dark p-8 md:p-10 rounded-2xl border border-white/10 shadow-2xl">
+                         <h3 class="text-2xl font-bold text-white mb-6">Quick Custom Order</h3>
+                         <form id="cake-order-form" class="space-y-4">
+                             <div>
+                                 <label class="block text-sm font-medium text-gray-400 mb-1">Name</label>
+                                 <input name="name" type="text" placeholder="Your Name" required class="w-full bg-background-base border border-white/10 rounded-lg px-4 py-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/>
+                             </div>
+                             <div>
+                                 <label class="block text-sm font-medium text-gray-400 mb-1">Phone</label>
+                                 <input name="phone" type="tel" placeholder="Phone Number" required class="w-full bg-background-base border border-white/10 rounded-lg px-4 py-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/>
+                             </div>
+                             <div class="grid grid-cols-2 gap-4">
+                                 <div>
+                                     <label class="block text-sm font-medium text-gray-400 mb-1">Cake Type</label>
+                                     <select name="cakeType" class="w-full bg-background-base border border-white/10 rounded-lg px-4 py-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
+                                         <option>Birthday</option>
+                                         <option>Wedding</option>
+                                         <option>Anniversary</option>
+                                         <option>Custom Design</option>
+                                     </select>
+                                 </div>
+                                 <div>
+                                     <label class="block text-sm font-medium text-gray-400 mb-1">Date Needed</label>
+                                     <input name="date" type="date" required class="w-full bg-background-base border border-white/10 rounded-lg px-4 py-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all [&::-webkit-calendar-picker-indicator]:invert"/>
+                                 </div>
+                             </div>
+                             <div>
+                                 <label class="block text-sm font-medium text-gray-400 mb-1">Message on Cake</label>
+                                 <textarea name="message" rows="2" placeholder="Happy Birthday John..." class="w-full bg-background-base border border-white/10 rounded-lg px-4 py-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"></textarea>
+                             </div>
+                             <button type="submit" class="w-full bg-primary hover:bg-primary-hover text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-1 mt-2">
+                                 Submit Request
+                             </button>
+                         </form>
+                     </div>
+                 </div>
+             </div>
+        </section>
+
+        <!-- Cake Gallery Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+             <div class="text-center mb-16">
+                 <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Our Portfolio</span>
+                 <h2 class="text-3xl md:text-4xl font-bold text-white">Gallery</h2>
+                 <p class="text-gray-400 mt-4">A glimpse of our recent creations.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                 <div class="col-span-1 md:col-span-2 row-span-2 rounded-xl overflow-hidden group relative">
+                      <img src="https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?q=80&w=1000&auto=format&fit=crop" alt="Gallery 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
+                      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                          <span class="text-white font-bold tracking-wider uppercase">Wedding Cakes</span>
+                      </div>
+                 </div>
+                 <div class="rounded-xl overflow-hidden group relative">
+                      <img src="https://raw.githubusercontent.com/malualmadut211-bot/ai-studio-media/ea180822e934718ddcfce5fef2697ed2f747a1f2/ChatGPT%20Image%20Feb%2018%2C%202026%2C%2004_00_22%20PM.png" alt="Gallery 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+                 </div>
+                 <div class="rounded-xl overflow-hidden group relative">
+                      <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?q=80&w=1000&auto=format&fit=crop" alt="Gallery 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+                 </div>
+                 <div class="rounded-xl overflow-hidden group relative">
+                      <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?q=80&w=1000&auto=format&fit=crop" alt="Gallery 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+                 </div>
+                 <div class="rounded-xl overflow-hidden group relative">
+                      <img src="https://images.unsplash.com/photo-1602351447937-745cb720612f?q=80&w=1000&auto=format&fit=crop" alt="Gallery 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+                 </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

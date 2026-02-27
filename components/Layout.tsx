@@ -191,6 +191,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                              <span className="material-icons text-primary text-sm">phone</span>
                              <a href="tel:+211910249910" className="hover:text-white transition-colors">+211 910 249 910</a>
                          </li>
+                         <li className="flex items-center gap-3">
+                             <span className="material-icons text-primary text-sm">email</span>
+                             <a href="mailto:info@phoenixrestaurantbar.com" className="hover:text-white transition-colors">info@phoenixrestaurantbar.com</a>
+                         </li>
                      </ul>
                 </div>
                  <div>

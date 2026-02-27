@@ -181,6 +181,10 @@ function renderFooter() {
                              <span class="material-icons text-primary text-sm">phone</span>
                              <a href="tel:+211910249910" class="hover:text-white transition-colors">+211 910 249 910</a>
                          </li>
+                         <li class="flex items-center gap-3">
+                             <span class="material-icons text-primary text-sm">email</span>
+                             <a href="mailto:info@phoenixrestaurantbar.com" class="hover:text-white transition-colors">info@phoenixrestaurantbar.com</a>
+                         </li>
                      </ul>
                 </div>
                  <div>
